@@ -2,7 +2,7 @@ const sidebarItems = document.querySelectorAll(".sidebar .item");
 const tableRows = document.querySelectorAll(".main table tbody tr");
 
 const menuBtn = document.getElementById("menu-btn");
-const leftSection = document.querySelector("left-section");
+const leftSection = document.querySelector(".left-section");
 
 let isMenuOpen = false;
 

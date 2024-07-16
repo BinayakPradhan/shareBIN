@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -16,14 +16,29 @@
       <div class="forms .log">
         <div class="form login">
           <span class="title">Login</span>
-          <form action="#">
+          <form action="/login" method="post">
             <div class="input-field">
-              <input type="text" placeholder="Enter your email" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="text"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
               <i class="uil uil-envelope icon"></i>
             </div>
             <div class="input-field">
               <input
                 type="password"
+                name="password"
                 placeholder="Enter your password"
                 class="password"
                 required
@@ -39,18 +54,16 @@
               <a href="#" class="text">Forgot Password?</a>
             </div>
             <div class="input-field button">
-              <input type="button" value="Login" />
+              <input type="submit" value="Login" />
             </div>
           </form>
           <div class="login-signup">
             <span class="text"
               >Not a member?
-              <a href="register.html" class="text signup-link"> Signup Now</a>
+              <a href="/" class="text signup-link"> Signup Now</a>
             </span>
           </div>
         </div>
-
-        <!-- Registration From -->
       </div>
     </div>
 
