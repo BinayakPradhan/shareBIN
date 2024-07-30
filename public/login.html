@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -16,10 +15,11 @@
       <div class="forms log">
         <div class="form login">
           <span class="title">Login</span>
-          <form action="/login" method="post" id="login">
+          <form id="login">
             <div class="input-field">
               <input
                 type="text"
+                id="name"
                 name="name"
                 placeholder="Enter your name"
                 required
@@ -29,6 +29,7 @@
             <div class="input-field">
               <input
                 type="text"
+                id="email"
                 name="email"
                 placeholder="Enter your email"
                 required
@@ -38,6 +39,7 @@
             <div class="input-field">
               <input
                 type="password"
+                id="password"
                 name="password"
                 placeholder="Enter your password"
                 class="password"
@@ -58,8 +60,8 @@
             </div>
           </form>
           <div class="login-signup">
-            <span class="text"
-              >Not a member?
+            <span class="text">
+              Not a member?
               <a href="/" class="text signup-link"> Signup Now</a>
             </span>
           </div>
@@ -67,6 +69,6 @@
       </div>
     </div>
 
-    <script src="form.js" defer></script>
+    <script src="form.js"></script>
   </body>
 </html>
