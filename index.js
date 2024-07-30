@@ -53,9 +53,10 @@ app.post("/login", async (req, res) => {
     const user = await LogInCollection.findOne({ email });
 
     if (user && user.password === password) {
-      // Send success response
-      window.location.href = "/home";
-      return res.status(200).json({ message: "Login successful" });
+      return res.status(200).json({
+        message: "Login successful",
+        userData: { name: user.name, email: user.email },
+      });
     } else {
       return res.status(401).json({ error: "Invalid email or password" });
     }

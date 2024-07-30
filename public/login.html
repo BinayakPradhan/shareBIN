@@ -13,10 +13,10 @@
   </head>
   <body>
     <div class="container">
-      <div class="forms .log">
+      <div class="forms log">
         <div class="form login">
           <span class="title">Login</span>
-          <form action="/login" method="post">
+          <form action="/login" method="post" id="login">
             <div class="input-field">
               <input
                 type="text"
@@ -54,7 +54,7 @@
               <a href="#" class="text">Forgot Password?</a>
             </div>
             <div class="input-field button">
-              <input type="submit" value="Login" />
+              <input type="submit" value="login" />
             </div>
           </form>
           <div class="login-signup">
@@ -67,6 +67,6 @@
       </div>
     </div>
 
-    <script src="form.js"></script>
+    <script src="form.js" defer></script>
   </body>
 </html>

@@ -30,6 +30,36 @@ document.getElementById("signup").addEventListener("submit", async (e) => {
   }
 });
 
+document.getElementById("login").addEventListener("submit", async (e) => {
+  e.preventDefault(); // Prevent the default form submission
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const res = await fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      console.log("Login successful", data);
+      localStorage.setItem("userData", JSON.stringify(data.userData));
+      alert(data.message);
+      console.log("Redirecting to /home");
+      window.location.assign("/home");
+    } else {
+      const errorData = await res.json();
+      alert(errorData.error);
+    }
+  } catch (error) {
+    console.error("Error during login:", error);
+    alert("Failed to login. Please try again later.");
+  }
+});
+
 // js to show or hide password & change icon
 pwShowHide.forEach((eyeIcon) => {
   eyeIcon.addEventListener("click", () => {
