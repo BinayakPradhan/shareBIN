@@ -41,7 +41,7 @@ To run this project locally, follow these steps:
 3. **Run the application:**
 
     ```bash
-    npm start
+    npm run dev
     ```
 
     The server will start on port 3300.
