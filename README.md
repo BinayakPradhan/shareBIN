@@ -58,9 +58,10 @@ To run this project locally, follow these steps:
    - Open your browser and navigate to `http://localhost:3300/login`.
    - Enter your credentials and login.
 
-3.**Home:**
+2. **Home:**
 
-    - Go to `http://localhost:3300/home`
+   - Open your browser and navigate to `http://localhost:3300/home`.
+ 
 
 
 
